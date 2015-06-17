@@ -1,0 +1,20 @@
+
+      <%= form_for elemento, remote: true do |f| %>
+        <div class="prezzo" style="color: green">
+          <%= number_to_currency(prodotto.prezzo, :unit => "€") %>
+        </div>
+        <div class="input-group-row">
+          <h3>TAGLIA</h3>
+          <%= f.select(:taglia, options_for_select( [ ['S', 'S'], ['M', 'M'], ['L', 'L'] ] ) )  %>
+          <div class="nascosto"><h3>Quanti?</h3>
+            <%= f.number_field :quantita, value: 1, class: "form-control", min: 1, max: 20 %>
+          </div>
+          <div class="input-group-btn">
+            <%= f.hidden_field :prodotto_id, value: prodotto.id %>
+                  
+            <%= f.submit "AGGIUNGI AL CARRELLO", class: "btn btn-primary" %>
+          </div>
+        </div>
+        </div>
+      <% end %>
+
