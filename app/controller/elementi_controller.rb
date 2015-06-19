@@ -10,6 +10,7 @@ def create
   if @elemento 
     @ordine = current_ordine
     @ordine.elementi.each {|elemento| elemento.quantita += 1 }
+    @elemento.update_attributes(elemento_params)
     @elementi = @ordine.elementi
   else
     @elemento = @ordine.elementi.new(elemento_params)
