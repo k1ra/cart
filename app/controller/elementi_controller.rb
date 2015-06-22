@@ -1,24 +1,20 @@
 class ElementiController < ApplicationController
 
-def create
-  @ordine = current_ordine
-  @prodotto = elemento_params[:prodotto_id]
-  @taglia = elemento_params[:taglia]
-
-  @elemento = @ordine.elementi.find_by(prodotto_id: @prodotto, taglia: @taglia)
-
-  if @elemento 
+  def create
     @ordine = current_ordine
-    @ordine.elementi.each {|elemento| elemento.quantita += 1 }
-    @elemento.update_attributes(elemento_params)
-    @elementi = @ordine.elementi
-  else
-    @elemento = @ordine.elementi.new(elemento_params)
+    @prodotto = elemento_params[:prodotto_id]
+    @taglia = elemento_params[:taglia]
+    @quantita = elemento_params[:quantita].to_i
+    @elemento = @ordine.elementi.find_by(prodotto_id: @prodotto, taglia: @taglia)
+    if @elemento 
+      @elemento.increment!( :quantita, by = @quantita )
+      @elementi = @ordine.elementi
+    else
+      @elemento = @ordine.elementi.new(elemento_params)
+    end
+    @ordine.save
+    session[:ordine_id] = @ordine.id
   end
-
-  @ordine.save
-  session[:ordine_id] = @ordine.id
-end
 
   def update
     @ordine = current_ordine
