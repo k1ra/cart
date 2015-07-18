@@ -1,10 +1,10 @@
-user_name@user_name-Spring-Peak:~/NRX_STORE$ rails server -e production
+user_name@user_name-Spring-Peak:~/app_name$ rails server -e production
 => Booting WEBrick
 => Rails 4.2.1 application starting in production on http://localhost:3000
 => Run `rails server -h` for more startup options
 => Ctrl-C to shutdown server
 Exiting
-/home/user_name/NRX_STORE/config/initializers/load_app_config.rb:2:in `<top (required)>': uninitialized constant YAML (NameError)
+/home/user_name/app_name/config/initializers/load_app_config.rb:2:in `<top (required)>': uninitialized constant YAML (NameError)
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/railties-4.2.1/lib/rails/engine.rb:652:in `block in load_config_initializer'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/activesupport-4.2.1/lib/active_support/notifications.rb:166:in `instrument'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/railties-4.2.1/lib/rails/engine.rb:651:in `load_config_initializer'
@@ -31,13 +31,13 @@ Exiting
 	from /home/user_name/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/tsort.rb:205:in `tsort_each'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/railties-4.2.1/lib/rails/initializable.rb:54:in `run_initializers'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/railties-4.2.1/lib/rails/application.rb:352:in `initialize!'
-	from /home/user_name/NRX_STORE/config/environment.rb:5:in `<top (required)>'
-	from /home/user_name/NRX_STORE/config.ru:3:in `require'
-	from /home/user_name/NRX_STORE/config.ru:3:in `block in <main>'
+	from /home/user_name/app_name/config/environment.rb:5:in `<top (required)>'
+	from /home/user_name/app_name/config.ru:3:in `require'
+	from /home/user_name/app_name/config.ru:3:in `block in <main>'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/rack-1.6.1/lib/rack/builder.rb:55:in `instance_eval'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/rack-1.6.1/lib/rack/builder.rb:55:in `initialize'
-	from /home/user_name/NRX_STORE/config.ru:in `new'
-	from /home/user_name/NRX_STORE/config.ru:in `<main>'
+	from /home/user_name/app_name/config.ru:in `new'
+	from /home/user_name/app_name/config.ru:in `<main>'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/rack-1.6.1/lib/rack/builder.rb:49:in `eval'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/rack-1.6.1/lib/rack/builder.rb:49:in `new_from_string'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/rack-1.6.1/lib/rack/builder.rb:40:in `parse_file'
@@ -52,8 +52,8 @@ Exiting
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:75:in `server'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/railties-4.2.1/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/railties-4.2.1/lib/rails/commands.rb:17:in `<top (required)>'
-	from /home/user_name/NRX_STORE/bin/rails:8:in `require'
-	from /home/user_name/NRX_STORE/bin/rails:8:in `<top (required)>'
+	from /home/user_name/app_name/bin/rails:8:in `require'
+	from /home/user_name/app_name/bin/rails:8:in `<top (required)>'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/spring-1.3.6/lib/spring/client/rails.rb:28:in `load'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/spring-1.3.6/lib/spring/client/rails.rb:28:in `call'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/spring-1.3.6/lib/spring/client/command.rb:7:in `call'
@@ -61,7 +61,7 @@ Exiting
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/spring-1.3.6/bin/spring:48:in `<top (required)>'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/spring-1.3.6/lib/spring/binstub.rb:11:in `load'
 	from /home/user_name/.rvm/gems/ruby-2.1.5/gems/spring-1.3.6/lib/spring/binstub.rb:11:in `<top (required)>'
-	from /home/user_name/NRX_STORE/bin/spring:13:in `require'
-	from /home/user_name/NRX_STORE/bin/spring:13:in `<top (required)>'
+	from /home/user_name/app_name/bin/spring:13:in `require'
+	from /home/user_name/app_name/bin/spring:13:in `<top (required)>'
 	from bin/rails:3:in `load'
 	from bin/rails:3:in `<main>'
